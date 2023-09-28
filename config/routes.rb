@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   get "/exercises/:id" => "exercises#show"
 
   post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
+
+  get "/routines/:id" => "routines#show"
+  patch "/routines/:id" => "routines#update"
 end

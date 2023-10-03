@@ -1,11 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 1
-  exercise_id: 1
-  reps: 1
+  name: MyString
+  description: MyText
+  image_url: MyText
+  video_url: MyText
 
 two:
-  user_id: 1
-  exercise_id: 1
-  reps: 1
+  name: MyString
+  description: MyText
+  image_url: MyText
+  video_url: MyText

@@ -5,11 +5,22 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   
-
+  get "/users/current" => "users#show"
   post "/users" => "users#create"
+  
 
   post "/sessions" => "sessions#create"
 
+  get "/exercises" => "exercises#index"
+  get "/exercises/:id" => "exercises#index"
+  post "/exercises" => "exercises#create"
+  patch "/exercises/:id" => "exercises#update"
+
+
+  get "/routines" => "routines#index"
+  get "/routines/:id" => "routines#show"
+  post "/routines" => "routines#create"
+  patch "/routines/:id" => "routines#update"
 
  
 end

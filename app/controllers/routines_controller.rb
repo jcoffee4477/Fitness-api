@@ -1,7 +1,8 @@
 class RoutinesController < ApplicationController
+before_action :authenticate_user
 
 def index 
-  @routines = Routine.all
+  @routines = current_user.routines
   render :index
 end
 
@@ -16,7 +17,8 @@ def update
     name: params[:name] || @routine.name,
     description: params[:description] || @routine.description,
     image_url: params[:image_url] || @routine.image_url,
-    video_url: params[:video_url] || @routine.video_url
+    video_url: params[:video_url] || @routine.video_url,
+    user_id: params[:user_id] || @routine.user_id
   )
   render :show
 end

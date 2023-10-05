@@ -6,8 +6,8 @@ def index
 end
 
 def show
-  @exercise = Exercise.find_by(id: param[:id])
-  render show
+  @exercise = Exercise.find_by(id: params[:id])
+  render :show
 end
 
 def update
@@ -34,6 +34,12 @@ def create
     user_id: params[:user_id]
   )
 
+  render :show
+end
+
+def destroy
+  @exercise = Exercise.find_by(id: params[:id])
+  @exercise.destroy
   render :show
 end
 

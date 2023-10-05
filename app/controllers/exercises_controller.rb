@@ -16,6 +16,7 @@ def update
     name: params[:name] || @exercise.name,
     reps: params[:reps] || @exercise.reps,
     sets: params[:sets] || @exercise.sets,
+    description: params[:description] || @exercise.description,
     routine_id: params[:routine_id] || @exercise.routine_id,
     user_id: params[:user_id] || @exercise.user_id
 
@@ -31,7 +32,8 @@ def create
     reps: params[:reps],
     sets: params[:sets],
     routine_id: params[:routine_id],
-    user_id: params[:user_id]
+    user_id: params[:user_id],
+    description: params[:description]
   )
 
   render :show

@@ -45,4 +45,10 @@ def destroy
   render :show
 end
 
+def delete_routine_from_exercise
+  @exercise = Exercise.find_by(id: params[:id])
+  @exercise.routine_id = nil
+  @exercise.save
+end
+
 end

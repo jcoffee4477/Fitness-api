@@ -24,5 +24,7 @@ Rails.application.routes.draw do
   patch "/routines/:id" => "routines#update"
   delete "/routines/:id" => "routines#destroy"
 
+  delete "/exercisesdelete/:id" => "exercises#delete_routine_from_exercise"
+
  
 end

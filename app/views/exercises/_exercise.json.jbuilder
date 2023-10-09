@@ -5,3 +5,5 @@ json.reps exercise.reps
 json.sets exercise.sets 
 json.name exercise.name
 json.description exercise.description
+json.resistance exercise.resistance
+json.image_url exercise.image_url

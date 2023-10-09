@@ -18,12 +18,12 @@ def update
     sets: params[:sets] || @exercise.sets,
     description: params[:description] || @exercise.description,
     routine_id: params[:routine_id] || @exercise.routine_id,
-    user_id: params[:user_id] || @exercise.user_id
+    user_id: params[:user_id] || @exercise.user_id,
+    resistance: params[:resistance] || @exercise.resistance,
+    image_url: params[:image_url] || @exercise.image_url
 
   )
   render :show
-
-
 end
 
 def create
@@ -33,7 +33,9 @@ def create
     sets: params[:sets],
     routine_id: params[:routine_id],
     user_id: params[:user_id],
-    description: params[:description]
+    description: params[:description],
+    resistance: params[:resistance],
+    image_url: params[:image_url]
   )
 
   render :show

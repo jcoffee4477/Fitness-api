@@ -30,7 +30,6 @@ def create
     image_url: params[:image_url],
     video_url: params[:video_url],
     user_id: current_user.id
-    
   )
   render :show
 end
@@ -40,6 +39,5 @@ def destroy
   @routine.destroy
   render json: {message:"removed"}
 end
-
 
 end

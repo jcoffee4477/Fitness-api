@@ -21,7 +21,6 @@ def update
     user_id: params[:user_id] || @exercise.user_id,
     resistance: params[:resistance] || @exercise.resistance,
     image_url: params[:image_url] || @exercise.image_url
-
   )
   render :show
 end
@@ -37,7 +36,6 @@ def create
     resistance: params[:resistance],
     image_url: params[:image_url]
   )
-
   render :show
 end
 

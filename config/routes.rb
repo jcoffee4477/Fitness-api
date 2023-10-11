@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
+
   get "/exercises" => "exercises#index"
   get "/exercises/:id" => "exercises#show"
   post "/exercises" => "exercises#create"
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   post "/routines" => "routines#create"
   patch "/routines/:id" => "routines#update"
   delete "/routines/:id" => "routines#destroy"
+  
 
   delete "/exercisesdelete/:id" => "exercises#delete_routine_from_exercise"
 
